@@ -51,12 +51,12 @@ class BlogPostsController < ApplicationController
     @post = BlogPost.find(params[:id])
     if @post.destroy
       # FSWD Roniel
-      # ---8) allows user to delete blog post.
+      # ---8) routes to a diiferent page after user succesfully deletes a blog post.
       redirect_to blog_posts_path
     end
   end
 
-  # ---9) allows user to has access to data entries inside appilcation
+  # ---9) security measure to protect what is allowed to be created or updated in the database, anything below private can only be accessed in the controller
   private
   def blog_post_params
     # ---10) allows blog post to require a title and content.

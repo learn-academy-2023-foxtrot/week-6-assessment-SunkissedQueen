@@ -14,15 +14,15 @@ Your answer: In order to fix this you will need to do a migration to add a new c
 
 Researched answer: Start off by generating a migration. In the terminal run: rails g migration NameOfMigration this will allow you to add a column to the student table. Then edit the generated migration file by using add_column :students, :cohort_id, :integer. Make sure to save this by typing: rails db:migrate in the terminal. Finish creating the belongs_to inside the students model, so the Students belongs_to a Cohort. This will allow the foreign key to work!
 
-more content:
+more content: additional approach
 
 2. Which RESTful routes must always be passed params?
 FSWD Aleja
-Your answer: edit, delete, show, and update because to do perform any of those actions we need to know on what entry we are perfoming them
+Your answer: edit, delete, show, and update because to do perform any of those actions we need to know on what entry we are performing them
 
-Researched answer: the show RESTful route lists one item in a particular mode, the delete RESTful destroys one item and removes information, the update RESTful route is the right convenction for the edit and update method because update can patch(edit) or put(update)
+Researched answer: the show RESTful route lists one item in a particular mode, the delete RESTful destroys one item and removes information, the update RESTful route is the right convention for the edit and update method because update can patch(edit) or put(update)
 
-more content:
+more content: review answer for clarity, create an example to show why some routes need params and others do not
 
 3. Name three rails generator commands. What is created by each?
 FSWD Mal
@@ -30,27 +30,27 @@ Your answer: rails generate model + model information creates a new model and ad
 
 Researched answer: rails generate scaffold creates the files required to start a new rails app.
 
-more content:
+more content: examples of files/folders that each command generates
 
 4. Consider the Rails routes below. What is the name of the controller method that would be called by each route? What action would each of the controller methods perform?
 
 FSWD Anabella
 
-action: "GET" location: /students CONTROLLER METHOD: showing action ACTION PERFORMED: retrieving or reading data regarding students
+action: "GET" location: /students CONTROLLER METHOD: index ACTION PERFORMED: retrieving or reading data regarding students, all instances
 
-action: "POST" location: /students CONTROLLER METHOD: creating action ACTION PERFORMED: creating or adding new data on the server, creation of a new student record or resource
+action: "POST" location: /students CONTROLLER METHOD: create ACTION PERFORMED: creating or adding new data on the server, creation of a new student record or resource
 
-action: "GET" location: /students/new CONTROLLER METHOD: showing action ACTION PERFORMED: retrieving or reading data for a new student record
+action: "GET" location: /students/new CONTROLLER METHOD: new ACTION PERFORMED: displaying a form to collect input that will be used to create a new student record
 
-action: "GET" location: /students/2 CONTROLLER METHOD: showing action ACTION PERFORMED: retrieving or reading data for a new student record
+action: "GET" location: /students/2 CONTROLLER METHOD: show ACTION PERFORMED: retrieving or reading data for an existing student record as specified by the params id
 
-action: "GET" location: /students/2/edit CONTROLLER METHOD: showing action ACTION PERFORMED: editing data aassociated with the ID of 2
+action: "GET" location: /students/2/edit CONTROLLER METHOD: edit ACTION PERFORMED: displaying a form that will have the data associated with the ID of 2 to allow us to update the record
 
-action: "PATCH" location: /students/2 CONTROLLER METHOD: updating action ACTION PERFORMED: apply changes or modification data for a new student record
+action: "PATCH" location: /students/2 CONTROLLER METHOD: update ACTION PERFORMED: apply changes or modification data for an existing student record
 
-action: "DELETE" location: /students/2 CONTROLLER METHOD: destoying an existing resource ACTION PERFORMED: removing or deleting the specific student ID of 2.
+action: "DELETE" location: /students/2 CONTROLLER METHOD: destroy ACTION PERFORMED: removing or deleting the specific student ID of 2.
 
-more content:
+more content: talk about experience
 
 5. As a developer, you are making an application to manage your to do list. Create 10 user stories that will help you get your application started. [Here is a resource](https://www.atlassian.com/agile/project-management/user-stories) to help you create your user stories.
 FSWD Dre
@@ -74,4 +74,4 @@ FSWD Dre
 
 10- As a user, I want to search and filter my to-do items based on different criteria, such as due date, category, or priority, to find specific tasks easily.
 
-more content:
+more content: talk about the order of accomplishing these stories

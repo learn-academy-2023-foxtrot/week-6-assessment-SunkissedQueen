@@ -31,17 +31,17 @@ describe("hitchHickersGuide", () => {
 // name : hitchHikerGuide
 // input : array
 // output : array
-// process : iterate through each value and split the full name into first and last, capitalize the full name by changing the char stored in index 0 to uppercase then using slice to rejoin the rest of the string, then use string interpulation to tie it all together 
+// process : iterate through each value and split the full name into first and last, capitalize the full name by changing the char stored in index 0 to uppercase then using slice to rejoin the rest of the string, then use string interpolation to tie it all together 
 
-// const hitchHikersGuide = (array) => { // will take an array as a parameter
-//     const sentences = array.map(value => { // have sentence hold the new array, use map to iterate through each value 
-//       const [firstName, lastName] = value.name.split(' ') // split the full name into first and last names
-//       const capFirstName = firstName.charAt(0).toUpperCase() + firstName.slice(1) // will hold the first name capitalized, by capitalizing the char in index 0 then slicing it with the rest of the name 
-//       const capLastName = lastName.charAt(0).toUpperCase() + lastName.slice(1) // will hold the last name capitalized, by capitalizing the char in index 0 then slicing it with the rest of the name 
-//       return `${capFirstName} ${capLastName} is ${value.occupation}.` // return the sentence using string interpulation 
-//     })
-//     return sentences // return the new senctence
-//   }
+const hitchHikersGuide = (array) => { // will take an array as a parameter
+    const sentences = array.map(value => { // have sentence hold the new array, use map to iterate through each value 
+      const [firstName, lastName] = value.name.split(' ') // split the full name into first and last names
+      const capFirstName = firstName.charAt(0).toUpperCase() + firstName.slice(1) // will hold the first name capitalized, by capitalizing the char in index 0 then slicing it with the rest of the name 
+      const capLastName = lastName.charAt(0).toUpperCase() + lastName.slice(1) // will hold the last name capitalized, by capitalizing the char in index 0 then slicing it with the rest of the name 
+      return `${capFirstName} ${capLastName} is ${value.occupation}.` // return the sentence using string interpolation 
+    })
+    return sentences // return the new sentence
+  }
 
 // --------------------2) Create a function that takes in a mixed data array and returns an array of only the REMAINDERS of the numbers when divided by 3.
 // FSWD Tori
@@ -67,11 +67,11 @@ describe("remainArray", () => {
 // Output: an array of numbers, only the remainders of the numbers inside the mixed array when divided by 3
 // Process: create a function, declare variables for the numbers only and remainders, use the medulo operator to divide by three and get the remainder, use the .filter method and the .map method to do the iterating of the arrays.
 
-// const remainArray = (array) => { // created a function called RemainArray that passes array as its parameter
-//   const onlyNums = array.filter((value) => typeof value === 'number') // created a variable for the numbers only by using the filter method to create an array of only the values that are the datatype of 'number' 
-//   const remainders = onlyNums.map((value) => value % 3) // take in the array of only the datatypes of 'number's and use the medulo operator to divide and get the remainders of the numbers inside the array
-//     return remainders // returns the array only the remainders of the numbers
-// }
+const remainArray = (array) => { // created a function called RemainArray that passes array as its parameter
+  const onlyNums = array.filter((value) => typeof value === 'number') // created a variable for the numbers only by using the filter method to create an array of only the values that are the datatype of 'number' 
+  const remainders = onlyNums.map((value) => value % 3) // take in the array of only the datatypes of 'number's and use the medulo operator to divide and get the remainders of the numbers inside the array
+    return remainders // returns the array only the remainders of the numbers
+}
 
 // console.log(remainArray(hodgepodge1))
 // console.log(remainArray(hodgepodge2))
@@ -110,6 +110,10 @@ const cubeAndSum2 = [0, 5, 10]
 
 // const cubeAndSum = (array) => 
 //   array.map(val => val ** 3).reduce((acc, val) => acc + val, 0)
+
+const cubeAndSum = (array) => {
+  return array.map(val => val ** 3).reduce((acc, val) => acc + val, 0)
+}
 
 
 /*
